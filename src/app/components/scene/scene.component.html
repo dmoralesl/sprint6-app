@@ -1,6 +1,8 @@
-<div style="display: flex;">
+<div style="display: flex;" [ngClass]="'buttons-header'">
     <button type="button" (click)="prev()">Previous</button>
     <button type="button" (click)="next()">Next</button>
 </div>
 
-<p *ngFor="let phrase of phrases; let i=index" [ngClass]="{'current-sentence': i===currentSentence}">{{ phrase }}</p>
+<img [src]="'../../../assets/images/' + (currentSentence + 1) + '.jpg'" alt="Background image">
+
+<p *ngFor="let phrase of phrases; let i=index" [ngClass]="{'current-sentence': i===currentSentence}">{{ phrase.txt }}</p>

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Phrase } from 'src/app/models/phraseModel';
+
 @Component({
   selector: 'app-scene',
   templateUrl: './scene.component.html',
@@ -12,8 +14,7 @@ export class SceneComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() phrases: string[] = [];
-
+  @Input() phrases: Phrase[] = [];
   currentSentence: number = 0;
 
   prev(): void {

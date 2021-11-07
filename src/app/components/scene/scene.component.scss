@@ -3,12 +3,13 @@ p {
     border: 2px solid black;
     border-radius: 1rem;
     padding: .5rem;
+    background-color: rgba(white, .7);
   }
 .current-sentence {
-    background-color: red;
+    background-color: rgb(238, 119, 119);
 }
 
-div {
+.buttons-header {
     display: flex;
 
     button {
@@ -17,4 +18,16 @@ div {
         font-size: large;
         cursor: pointer;
     }
+}
+
+:host {
+    position: relative;
+}
+
+img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -99;
 }
