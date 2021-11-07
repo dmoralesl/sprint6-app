@@ -1,0 +1,20 @@
+p {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: .5rem;
+  }
+.current-sentence {
+    background-color: red;
+}
+
+div {
+    display: flex;
+
+    button {
+        flex: 1;
+        padding: 1rem;
+        font-size: large;
+        cursor: pointer;
+    }
+}

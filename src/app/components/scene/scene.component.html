@@ -1,1 +1,6 @@
-<p>scene works!</p>
+<div style="display: flex;">
+    <button type="button" (click)="prev()">Previous</button>
+    <button type="button" (click)="next()">Next</button>
+</div>
+
+<p *ngFor="let phrase of phrases; let i=index" [ngClass]="{'current-sentence': i===currentSentence}">{{ phrase }}</p>

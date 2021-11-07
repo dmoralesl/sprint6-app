@@ -1,1 +1,12 @@
-<p>home works!</p>
+<app-scene *ngIf="displayChild; else welcomePage" #home [phrases]="phrases"></app-scene>
+
+<ng-template #welcomePage>
+    <h2>Welcome to the my very first Angular project</h2>
+    <p>
+        This project is based in simple practices with Angular. <br/>
+        The goal is putting everything before learned in small application that have got a data 
+        communication between parent and child components (both directions) and uses main directives as ngFor, ngIf or ngTemplate. 
+    </p>
+    <button type="button" (click)="goToApp()">Go to app!</button>
+
+</ng-template>
