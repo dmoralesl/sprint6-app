@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Phrase } from 'src/app/models/phraseModel';
+import { phrases }  from '../../../assets/data/phrases';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  phrases: Phrase[];
+  constructor() { 
+    console.log('frases', phrases)
+    this.phrases = phrases;
+  }
 
   ngOnInit(): void {
   }
@@ -17,12 +24,4 @@ export class HomeComponent implements OnInit {
   goToApp(): void {
     this.displayChild = true;
   }
-
-  phrases: string[] = [
-    "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
-    "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
-    "L'heroi va decidir travessar la porta que el portava a casa",
-    "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ..."
-  ]
-
 }
